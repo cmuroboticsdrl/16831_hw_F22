@@ -211,9 +211,40 @@ class RL_Trainer(object):
             train_video_paths: paths which also contain videos for visualization purposes
         """
         # TODO: get this from hw1 or hw2
+        if itr == 0:
+            num_transitions_to_sample = self.params['batch_size_initial']
+        else:
+            num_transitions_to_sample = self.params['batch_size']
+
+#        print('Collecting train data...')
+        paths, envsteps_this_batch = utils.sample_trajectories(
+            self.env,
+            collect_policy,
+            num_transitions_to_sample,
+            self.params['ep_len']
+        )
+
+        train_video_paths = None
+        if self.logvideo:
+            print('Collecting rollouts for video...')
+            train_video_paths = utils.sample_n_trajectories(
+                self.env,
+                collect_policy,
+                MAX_NVIDEO,
+                MAX_VIDEO_LEN,
+                True
+            )
+
+        return paths, envsteps_this_batch, train_video_paths
 
     def train_agent(self):
         # TODO: get this from hw1 or hw2
+        all_logs = []
+        for train_step in range(self.params['num_agent_train_steps_per_iter']):
+            obs_batch, act_batch, rew_batch, nobs_batch, term_batch = self.agent.sample(self.params['train_batch_size'])
+            train_log = self.agent.train(obs_batch, act_batch, rew_batch, nobs_batch, term_batch)
+            all_logs.append(train_log)
+        return all_logs
 
     ####################################
     ####################################
