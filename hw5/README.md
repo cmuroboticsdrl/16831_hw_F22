@@ -9,11 +9,11 @@ You can run this code on your own machine or on Google Colab.
 
 RND + CQL:
 
-[![Open In Colab RND + CQL](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cmuroboticsdrl/16831_hw_F22/blob/master/hw5/run_hw5_expl.ipynb)
+[![Open In Colab RND + CQL](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cmuroboticsdrl/16831_hw_F22/blob/master/hw5/rob831/scripts/run_hw5_expl.ipynb)
 
 RWR/AWR/AWAC:
 
-[![Open In Colab AWAC](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cmuroboticsdrl/16831_hw_F22/blob/master/hw5/run_hw5_awac.ipynb)
+[![Open In Colab AWAC](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cmuroboticsdrl/16831_hw_F22/blob/master/hw5/rob831/scripts/run_hw5_awac.ipynb)
 
 ## Complete the code
 
