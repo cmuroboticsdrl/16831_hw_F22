@@ -34,6 +34,6 @@ The relevant sections are marked with `TODO`.
 
 You may also want to look through [scripts/run_hw5_expl.py](rob831/scripts/run_hw5_expl.py) (if running locally) or [run_hw5_expl.ipynb](rob831/scripts/run_hw5_expl.ipynb) (if running on Colab), though you will not need to edit this files beyond changing runtime arguments in the Colab notebook.
 
-See the [assignment PDF](hw5.pdf) for more details on what files to edit.
+See the [assignment PDF](16831_hw5.pdf) for more details on what files to edit.
 
 For this particular assignment, you will need to install networkx==2.5
