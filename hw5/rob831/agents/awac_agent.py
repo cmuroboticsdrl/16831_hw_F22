@@ -74,11 +74,13 @@ class AWACAgent(DQNAgent):
 
         #TODO: Implement advantage estimate using AWR
         if self.awr:
+            return TODO
 
         #TODO: Implement advantage estimate using AWAC
         else:
             # TODO Calculate Q-Values
             # TODO Calculate the Advantage        
+            return TODO
 
     def train(self, ob_no, ac_na, re_n, next_ob_no, terminal_n, return_n):
         log = {}
@@ -126,8 +128,6 @@ class AWACAgent(DQNAgent):
             # TODO: update actor
             # 1): Estimate the advantage
             # 2): Calculate the awac actor loss
-            advantage = self.estimate_advantage(ob_no, ac_na, re_n, next_ob_no, terminal_n, return_n, self.agent_params['n_actions'])
-            actor_loss = self.awac_actor.update(ob_no, ac_na, advantage)
 
             # TODO: Update Target Networks #
             if self.num_param_updates % self.target_update_freq == 0:
