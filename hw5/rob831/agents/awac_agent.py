@@ -38,7 +38,7 @@ class AWACAgent(DQNAgent):
             self.agent_params['size'],
             self.agent_params['discrete'],
             self.agent_params['learning_rate'],
-            self.agent_params['awac_lambda'],
+            lambda_awac = self.agent_params['awac_lambda'],
         )
 
         self.exploit_rew_shift = agent_params['exploit_rew_shift']
